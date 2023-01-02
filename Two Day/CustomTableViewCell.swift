@@ -20,6 +20,7 @@ class CustomTableViewCell: UITableViewCell {
     
     var isDone = true
     var Buttons = [UIButton]()
+    var date = ""
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -52,8 +53,6 @@ class CustomTableViewCell: UITableViewCell {
         contentView.clipsToBounds = true
     }
     
-
-    
     @IBAction func isDoneButtonClicked(_ sender: Any) {
 
         if isDone {
@@ -66,8 +65,7 @@ class CustomTableViewCell: UITableViewCell {
             isDone = true
         }
     }
- 
-    @IBAction func dayButtonClicked(_ sender: Any) {
-    }
     
+    @IBAction func dayButtonClicked(_ sender: UIButton) {
+    }
 }
