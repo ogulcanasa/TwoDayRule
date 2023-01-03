@@ -17,18 +17,18 @@ class CustomTableViewCell: UITableViewCell {
     @IBOutlet var day3Button: UIButton!
     @IBOutlet var day4Button: UIButton!
     @IBOutlet var day5Button: UIButton!
-    
+
     var isDone = true
-    var Buttons = [UIButton]()
+    var buttons = [UIButton]()
     var date = ""
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         isDoneButton.imageView?.contentMode = .scaleToFill
-        
-        Buttons = [day1Button, day2Button, day3Button, day4Button, day5Button]
 
-        for button in Buttons {
+        buttons = [day1Button, day2Button, day3Button, day4Button, day5Button]
+
+        for button in buttons {
             button.layer.cornerRadius = 0.5 * button.bounds.size.width
             button.clipsToBounds = true
         }
@@ -42,7 +42,7 @@ class CustomTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    
+
     override func layoutSubviews() {
         super.layoutSubviews()
 
@@ -52,7 +52,7 @@ class CustomTableViewCell: UITableViewCell {
         contentView.layer.cornerRadius = 10
         contentView.clipsToBounds = true
     }
-    
+
     @IBAction func isDoneButtonClicked(_ sender: Any) {
 
         if isDone {
@@ -65,7 +65,7 @@ class CustomTableViewCell: UITableViewCell {
             isDone = true
         }
     }
-    
+
     @IBAction func dayButtonClicked(_ sender: UIButton) {
     }
 }

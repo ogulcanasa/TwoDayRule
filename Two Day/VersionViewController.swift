@@ -8,11 +8,11 @@
 import UIKit
 
 class VersionViewController: UIViewController {
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
+
     @IBAction func continueButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }

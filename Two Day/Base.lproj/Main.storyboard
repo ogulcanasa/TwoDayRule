@@ -113,11 +113,11 @@
             <objects>
                 <viewController storyboardIdentifier="calendarSegue" id="CVg-gK-auY" customClass="ViewController" customModule="Two_Day" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UYL-8E-CLE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zJP-GX-Voy">
-                                <rect key="frame" x="20" y="68" width="374" height="670"/>
+                                <rect key="frame" x="20" y="112" width="374" height="685"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell2" rowHeight="95" id="Laz-Fu-3Kg" customClass="CustomTableViewCell" customModule="Two_Day" customModuleProvider="target">
@@ -255,7 +255,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MTa-jZ-X0A">
-                                <rect key="frame" x="177" y="748" width="60" height="60"/>
+                                <rect key="frame" x="177" y="737" width="60" height="60"/>
                                 <color key="backgroundColor" systemColor="systemRedColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="LF9-in-8Rm"/>
@@ -272,10 +272,10 @@
                         <viewLayoutGuide key="safeArea" id="l1W-UX-A1G"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="l1W-UX-A1G" firstAttribute="bottom" secondItem="zJP-GX-Voy" secondAttribute="bottom" constant="16" id="29d-LW-Zcc"/>
                             <constraint firstItem="zJP-GX-Voy" firstAttribute="leading" secondItem="l1W-UX-A1G" secondAttribute="leading" constant="20" id="Qst-s8-8rF"/>
                             <constraint firstItem="l1W-UX-A1G" firstAttribute="trailing" secondItem="zJP-GX-Voy" secondAttribute="trailing" constant="20" id="XH3-hW-yff"/>
-                            <constraint firstItem="MTa-jZ-X0A" firstAttribute="top" secondItem="zJP-GX-Voy" secondAttribute="bottom" constant="10" id="Yp1-zf-cU3"/>
-                            <constraint firstItem="l1W-UX-A1G" firstAttribute="bottom" secondItem="MTa-jZ-X0A" secondAttribute="bottom" constant="30" id="cGo-Bp-GQu"/>
+                            <constraint firstItem="l1W-UX-A1G" firstAttribute="bottom" secondItem="MTa-jZ-X0A" secondAttribute="bottom" constant="16" id="cGo-Bp-GQu"/>
                             <constraint firstItem="zJP-GX-Voy" firstAttribute="top" secondItem="l1W-UX-A1G" secondAttribute="top" constant="20" id="i0N-ya-QFs"/>
                             <constraint firstItem="MTa-jZ-X0A" firstAttribute="centerX" secondItem="UYL-8E-CLE" secondAttribute="centerX" id="kkN-2U-xLB"/>
                         </constraints>
@@ -284,7 +284,7 @@
                     <connections>
                         <outlet property="addButton" destination="MTa-jZ-X0A" id="Lfn-x4-ypm"/>
                         <outlet property="tableView" destination="zJP-GX-Voy" id="Rde-fd-9fL"/>
-                        <segue destination="lhK-jd-Tzk" kind="show" identifier="addSegue" id="7gw-aO-0sT"/>
+                        <segue destination="lhK-jd-Tzk" kind="presentation" identifier="addSegue" id="7gw-aO-0sT"/>
                         <segue destination="Dyd-3q-4kr" kind="show" identifier="calendarSegue" id="bQh-cG-5Lp"/>
                     </connections>
                 </viewController>
@@ -376,20 +376,46 @@
                                     <constraint firstAttribute="trailing" secondItem="Anq-mT-JYu" secondAttribute="trailing" id="lwN-n1-1Rr"/>
                                 </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Whf-IS-KIK">
+                                <rect key="frame" x="309" y="35.5" width="100" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="SEz-E4-NDL"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Add"/>
+                                <connections>
+                                    <action selector="addButtonClicked:" destination="lhK-jd-Tzk" eventType="touchUpInside" id="RNs-fi-WZO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zg6-hc-3j0">
+                                <rect key="frame" x="5" y="35.5" width="100" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="6ug-CF-wYV"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                <connections>
+                                    <action selector="cancelButtonClicked:" destination="lhK-jd-Tzk" eventType="touchUpInside" id="iDd-Wn-bcD"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vVK-NG-QVq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zg6-hc-3j0" firstAttribute="leading" secondItem="vVK-NG-QVq" secondAttribute="leading" constant="5" id="TGR-TJ-afH"/>
                             <constraint firstItem="PgW-7W-f2E" firstAttribute="leading" secondItem="vVK-NG-QVq" secondAttribute="leading" constant="15" id="Xvg-gY-gi3"/>
+                            <constraint firstItem="vVK-NG-QVq" firstAttribute="trailing" secondItem="Whf-IS-KIK" secondAttribute="trailing" constant="5" id="bVr-nL-K1E"/>
+                            <constraint firstItem="PgW-7W-f2E" firstAttribute="top" secondItem="Whf-IS-KIK" secondAttribute="bottom" constant="30" id="byH-ye-CHV"/>
                             <constraint firstItem="PgW-7W-f2E" firstAttribute="top" secondItem="NtG-4Q-UXQ" secondAttribute="top" constant="100" id="hqq-rv-l1F"/>
                             <constraint firstItem="vVK-NG-QVq" firstAttribute="trailing" secondItem="PgW-7W-f2E" secondAttribute="trailing" constant="15" id="kFe-3n-RAt"/>
+                            <constraint firstItem="PgW-7W-f2E" firstAttribute="top" secondItem="zg6-hc-3j0" secondAttribute="bottom" constant="30" id="qat-JV-hE3"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cZg-kt-Coq"/>
                     <connections>
+                        <outlet property="addButton" destination="Whf-IS-KIK" id="ie7-L5-M81"/>
                         <outlet property="reasonTextField" destination="fjK-rm-n1B" id="dJA-35-Ai0"/>
                         <outlet property="titleTextField" destination="0yI-FH-P4N" id="aYB-D1-CjQ"/>
-                        <segue destination="CVg-gK-auY" kind="show" identifier="backSegue" id="wjn-z2-Am0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hze-G7-Wgf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -466,7 +492,7 @@
             <objects>
                 <viewController id="Dyd-3q-4kr" customClass="CalendarViewController" customModule="Two_Day" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CIC-N1-Nce">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="wdh-8j-UKD">
@@ -520,10 +546,6 @@
             <point key="canvasLocation" x="2353.6231884057975" y="-368.30357142857139"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="7gw-aO-0sT"/>
-        <segue reference="wjn-z2-Am0"/>
-    </inferredMetricsTieBreakers>
     <resources>
         <image name="gear" catalog="system" width="128" height="122"/>
         <image name="plus" catalog="system" width="128" height="113"/>
