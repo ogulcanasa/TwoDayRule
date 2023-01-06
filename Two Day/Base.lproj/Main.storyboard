@@ -284,7 +284,7 @@
                     <connections>
                         <outlet property="addButton" destination="MTa-jZ-X0A" id="Lfn-x4-ypm"/>
                         <outlet property="tableView" destination="zJP-GX-Voy" id="Rde-fd-9fL"/>
-                        <segue destination="lhK-jd-Tzk" kind="presentation" identifier="addSegue" id="7gw-aO-0sT"/>
+                        <segue destination="lhK-jd-Tzk" kind="presentation" identifier="addSegue" modalPresentationStyle="fullScreen" id="7gw-aO-0sT"/>
                         <segue destination="Dyd-3q-4kr" kind="show" identifier="calendarSegue" id="bQh-cG-5Lp"/>
                     </connections>
                 </viewController>
@@ -295,9 +295,9 @@
         <!--Add New Habit View Controller-->
         <scene sceneID="O6c-7Y-440">
             <objects>
-                <viewController id="lhK-jd-Tzk" customClass="AddNewHabitViewController" customModule="Two_Day" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController wantsFullScreenLayout="YES" id="lhK-jd-Tzk" customClass="AddNewHabitViewController" customModule="Two_Day" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NtG-4Q-UXQ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="838"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="PgW-7W-f2E">
@@ -496,10 +496,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="wdh-8j-UKD">
-                                <rect key="frame" x="20" y="85" width="80" height="189"/>
+                                <rect key="frame" x="20" y="85" width="374" height="189"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Habit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzy-Dv-n7M">
-                                        <rect key="frame" x="20" y="0.0" width="40" height="40"/>
+                                        <rect key="frame" x="167" y="0.0" width="40" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="40" id="1Sk-56-wYu"/>
                                             <constraint firstAttribute="height" constant="40" id="6GG-XD-Nji"/>
@@ -511,7 +511,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Streak" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NlB-Bs-vcb">
-                                        <rect key="frame" x="20" y="165" width="40" height="24"/>
+                                        <rect key="frame" x="20" y="165" width="334" height="24"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>

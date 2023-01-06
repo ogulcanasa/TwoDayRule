@@ -15,6 +15,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     var habitsArray = [String]()
     var reasonsArray = [String]()
+    var datesArray = [[String]]()
+    var idArray = [UUID]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,11 +37,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         getData()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        NotificationCenter.default.addObserver(self, selector: #selector(getData),
+                                               name: NSNotification.Name(rawValue: "newData"), object: nil)
+    }
+
     @IBAction func addButtonClicked(_ sender: Any) {
         performSegue(withIdentifier: "addSegue", sender: nil)
     }
 
-    func getData() {
+    @objc func getData() {
+
+        habitsArray.removeAll(keepingCapacity: false)
+        reasonsArray.removeAll(keepingCapacity: false)
+        datesArray.removeAll(keepingCapacity: false)
+        idArray.removeAll(keepingCapacity: false)
+
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             let context = appDelegate.persistentContainer.viewContext
 
@@ -56,8 +69,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                             if let reason = result.value(forKey: "reason") as? String {
                                 self.reasonsArray.append(reason)
                             }
+                            if let dates = result.value(forKey: "dateArray") as? [String] {
+                                self.datesArray.append(dates)
+                                print(dates)
+                            }
+                            if let id = result.value(forKey: "id") as? UUID {
+                                self.idArray.append(id)
+                            }
+                            self.tableView.reloadData()
                         }
-                        self.tableView.reloadData()
                     } else {}
                 }
             } catch {
@@ -120,6 +140,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                                         context.delete(result)
                                         habitsArray.remove(at: indexPath.row)
                                         reasonsArray.remove(at: indexPath.row)
+                                        datesArray.remove(at: indexPath.row)
                                         self.tableView.reloadData()
 
                                         do {

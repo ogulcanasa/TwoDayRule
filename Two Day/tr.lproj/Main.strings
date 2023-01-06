@@ -1,0 +1,75 @@
+
+/* Class = "UITabBarItem"; title = "Settings"; ObjectID = "3O7-pm-hiJ"; */
+"3O7-pm-hiJ.title" = "Settings";
+
+/* Class = "UILabel"; text = "Add New Habit"; ObjectID = "Anq-mT-JYu"; */
+"Anq-mT-JYu.text" = "Add New Habit";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "AvA-Db-DHe"; */
+"AvA-Db-DHe.text" = "Title";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Ez2-B9-3hA"; */
+"Ez2-B9-3hA.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "FmT-Ft-jbs"; */
+"FmT-Ft-jbs.text" = "Title";
+
+/* Class = "UIButton"; configuration.title = "✓"; ObjectID = "HKU-M7-J7h"; */
+"HKU-M7-J7h.configuration.title" = "✓";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "HKU-M7-J7h"; */
+"HKU-M7-J7h.normalTitle" = "Button";
+
+/* Class = "UITabBarItem"; title = "Habits"; ObjectID = "K3X-NQ-o6p"; */
+"K3X-NQ-o6p.title" = "Habits";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "LrA-Mi-0Dh"; */
+"LrA-Mi-0Dh.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MTa-jZ-X0A"; */
+"MTa-jZ-X0A.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Streak"; ObjectID = "NlB-Bs-vcb"; */
+"NlB-Bs-vcb.text" = "Streak";
+
+/* Class = "UILabel"; text = "Reason"; ObjectID = "PMH-sv-jms"; */
+"PMH-sv-jms.text" = "Reason";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "QPh-Y6-6Qx"; */
+"QPh-Y6-6Qx.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Continue"; ObjectID = "TSB-jm-lzH"; */
+"TSB-jm-lzH.configuration.title" = "Continue";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "TSB-jm-lzH"; */
+"TSB-jm-lzH.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Add"; ObjectID = "Whf-IS-KIK"; */
+"Whf-IS-KIK.configuration.title" = "Add";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Whf-IS-KIK"; */
+"Whf-IS-KIK.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Habit"; ObjectID = "Xzy-Dv-n7M"; */
+"Xzy-Dv-n7M.text" = "Habit";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dOL-IV-BxI"; */
+"dOL-IV-BxI.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Title:"; ObjectID = "gEE-j6-C3i"; */
+"gEE-j6-C3i.text" = "Title:";
+
+/* Class = "UILabel"; text = "Reason:"; ObjectID = "hDC-sa-ENN"; */
+"hDC-sa-ENN.text" = "Reason:";
+
+/* Class = "UILabel"; text = "Detail"; ObjectID = "iRJ-Ad-Zkg"; */
+"iRJ-Ad-Zkg.text" = "Detail";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "qup-q9-GvK"; */
+"qup-q9-GvK.normalTitle" = "Button";
+
+/* Class = "UIButton"; configuration.title = "Cancel"; ObjectID = "zg6-hc-3j0"; */
+"zg6-hc-3j0.configuration.title" = "Cancel";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zg6-hc-3j0"; */
+"zg6-hc-3j0.normalTitle" = "Button";

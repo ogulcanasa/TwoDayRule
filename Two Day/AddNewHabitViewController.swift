@@ -12,6 +12,9 @@ class AddNewHabitViewController: UIViewController {
 
     var titleHabit: String?
     var reasonHabit: String?
+    let date = Date()
+    let calendar = Calendar.current
+    var timeArray = [String]()
 
     @IBOutlet var addButton: UIButton!
     @IBOutlet var titleTextField: UITextField!
@@ -31,6 +34,15 @@ class AddNewHabitViewController: UIViewController {
     }
 
     @IBAction func addButtonClicked(_ sender: Any) {
+
+        // Takes current time
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yy"
+        let time = dateFormatter.string(from: Date())
+        let time2 = "01.01.2023"
+        let time3 = "02.01.2023"
+        timeArray = [time, time2, time3]
+
         if let appDelegate = UIApplication.shared.delegate as? AppDelegate {
             let context = appDelegate.persistentContainer.viewContext
             let habits = NSEntityDescription.insertNewObject(forEntityName: "Habits", into: context)
@@ -39,6 +51,8 @@ class AddNewHabitViewController: UIViewController {
             if (titleTextField.text != "") && (reasonTextField.text != "") {
                 habits.setValue(titleTextField.text!, forKey: "title")
                 habits.setValue(reasonTextField.text!, forKey: "reason")
+                habits.setValue(timeArray, forKey: "dateArray")
+                habits.setValue(UUID(), forKey: "id")
             }
             do {
                 try context.save()
@@ -48,6 +62,7 @@ class AddNewHabitViewController: UIViewController {
             }
         } else {}
         dismiss(animated: true, completion: nil)
+        NotificationCenter.default.post(name: NSNotification.Name("newData"), object: nil)
     }
     @IBAction func cancelButtonClicked(_ sender: Any) {
         dismiss(animated: true, completion: nil)
